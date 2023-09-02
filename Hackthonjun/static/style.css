@@ -1,0 +1,13 @@
+body {
+    background-image: url('/static/images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+}

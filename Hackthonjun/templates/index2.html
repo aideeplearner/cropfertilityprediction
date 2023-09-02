@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Fertility Prediction</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Crop Fertility Prediction</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <form method="POST">
+                    {% for key, value in left_inputs.items() %}
+                    <div class="form-group">
+                        <label for="{{ key }}">{{ key }}</label>
+                        <input type="text" class="form-control" id="{{ key }}" name="{{ key }}" value="{{ value }}">
+                    </div>
+                    {% endfor %}
+            </div>
+            <div class="col-md-6">
+                {% for key, value in right_inputs.items() %}
+                <div class="form-group">
+                    <label for="{{ key }}">{{ key }}</label>
+                    <input type="text" class="form-control" id="{{ key }}" name="{{ key }}" value="{{ value }}">
+                </div>
+                {% endfor %}
+                <button type="submit" class="btn btn-primary">Predict</button>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <h2>Prediction Result</h2>
+                <p>{{ prediction_result }}</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

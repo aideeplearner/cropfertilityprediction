@@ -1,0 +1,16 @@
+ /* Custom CSS styles can be added here */
+ body {
+    background-image: url('/static/images/crop1.jpeg'); /* Replace with the path to your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.welcome-container {
+    text-align: center;
+    margin-top: 100px;
+    background-color: rgba(255, 255, 255, 0.5); /* Add a semi-transparent white background for better readability */
+    padding: 20px;
+    border-radius: 10px;
+}
